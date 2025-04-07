@@ -39,7 +39,7 @@ This pipeline requires only a standard computer with enough RAM to support the i
 
 ## Example and Usage
 ### 1. call transcriptomic-wide Ψ site from PRAISE sequecing method
-After obtained raw data of the PRAISE sequencing, we firstly need to call transcriptomic-wide Ψ sites according published PRAISE-pipeline (https://github.com/Zhe-jiang/PRAISE). This step is time-consuming, which usually need several days. Here, we have provided a example file in data dir ("gce_sudoU_sites.xls"). The content of each column in the file is as follows:
+After obtained raw data of the PRAISE sequencing, we firstly need to call transcriptomic-wide Ψ sites according published PRAISE-pipeline (https://github.com/Zhe-jiang/PRAISE). This step is time-consuming, which usually need several days. Here, we have provided a example file in data dir ("gce_sudoU_sites.xls"). The content of each column in the outfile is as follows:
 
 | Columns | Interpretation |
 | :---: | :---: |
