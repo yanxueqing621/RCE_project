@@ -25,27 +25,31 @@ This pipeline requires only a standard computer with enough RAM to support the i
 ### Software 
 - PRAISE pipeline (version 1.0)
 - Methylsig R package (version 1.17.0)
-- 
+- Perl package: Modern::Perl, IO::All
+
 
 
 
 ## Example and Usage
-### 一. call transcriptomic-wide Ψ site from PRAISE sequecing method
-After obtained raw data of the PRAISE sequencing, we firstly need to call transcriptomic-wide Ψ sites according published PRAISE-pipeline (https://github.com/Zhe-jiang/PRAISE). This step is time-consuming, which usually need several days. Here, we have provided a example file in data dir ("sudoU_sites.xls"). The content of each column in the file is as follows:
+### 1. call transcriptomic-wide Ψ site from PRAISE sequecing method
+After obtained raw data of the PRAISE sequencing, we firstly need to call transcriptomic-wide Ψ sites according published PRAISE-pipeline (https://github.com/Zhe-jiang/PRAISE). This step is time-consuming, which usually need several days. Here, we have provided a example file in data dir ("gce_sudoU_sites.xls"). The content of each column in the file is as follows:
 
 | Columns | Interpretation |
 | :---: | :---: |
-| Chr | chromosome |
-| Sites | genomic loci |
-| Strand | strand |
-| Gene | annotated gene |
-| CR | conversion rate for genes |
-| AGcov | reads coverage with A and G |
-| Acov | reads coverage with A |
-| Genecov | mean coverage for the whole gene |
-| Ratio | A rate for the sites/ or methylation level for the sites |
-| Pvalue | test for A rate based on the background |
-| P_adjust | FDR ajusted P value |
+| chr_name | transcript name |
+| site | sudoU positions in transcripts |
+| treated_total_counts | reads coverage at sudoU site in the treated sample |
+| treated_deletion_counts | deletion count at sudoU site in the treated sample  |
+| treated_deletion_ratio | deletion ratio at sudoU site in the treated sample |
+| ctrl_total_counts | reads coverage at sudoU site in the control sample |
+| ctrl_deletion_counts |  deletion count at sudoU site in the control sample |
+| ctrl_deletion_ratio | deletion ratio at sudoU site in the control sample |
+| p_value |  statistically significant whether a true sudoU site |
+| chr_site | position in chromosome |
 
+### 2. Transform the format of sudoU_sites file
+change the format of sudoU_sites file to conduct statistic analysis, the output file gce_sudoU_sites_for_statistic.xls is used to conduct methylsig analysis
+``` perl convert_to_methylsig_format.pl  gce_sudoU_sites.xls  gce_sudoU_sites_for_statistic.xls```
 
-
+### 3. identified offtarget sudoU sites
+``` Rscript identify_offtarget_site.R --c1 control1_for_statistic.xls --c2 control2_for_statistic.xls --t1 treat1_for_statistic.xls --t2 treat2_for_statistic.xls  -o offtarget.xls ```
