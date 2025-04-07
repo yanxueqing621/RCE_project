@@ -25,9 +25,16 @@ This pipeline requires only a standard computer with enough RAM to support the i
 ### Software 
 - PRAISE pipeline (version 1.0)
 - Methylsig R package (version 1.17.0)
-- Perl package: Modern::Perl, IO::All
-
-
+- Perl (version 5.26)
+- Perl packages:
+  - Modern::Perl
+  - IO::All
+- R (version 4.3.1)
+- R packages
+  - methylSig
+  - getopt
+  - dplyr
+  - bsseq
 
 
 ## Example and Usage
@@ -48,7 +55,7 @@ After obtained raw data of the PRAISE sequencing, we firstly need to call transc
 | chr_site | position in chromosome |
 
 ### 2. Transform the format of sudoU_sites file
-change the format of sudoU_sites file to conduct statistic analysis, the output file gce_sudoU_sites_for_statistic.xls is used to conduct methylsig analysis
+change the format of sudoU_sites file to conduct statistic analysis, the output file gce_sudoU_sites_for_statistic.xls is used to conduct methylsig analysis, this step usually need less than one minite.
 ``` perl convert_to_methylsig_format.pl  gce_sudoU_sites.xls  gce_sudoU_sites_for_statistic.xls```
 
 ### 3. identified offtarget sudoU sites
