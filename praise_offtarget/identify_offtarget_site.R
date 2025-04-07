@@ -13,7 +13,7 @@ spec = matrix(c(
                         ), byrow = TRUE, ncol = 4)
 args = getopt(spec)
 if (!is.null(args$help) || is.null(args$n1)) {
-        cat("Rscript identify_offtarget_site.R --c1 control1_for_statistic.xls --c2 control2_for_statistic.xls  -o offtarget.xls\n")
+        cat("Rscript identify_offtarget_site.R --c1 control1_for_statistic.xls --c2 control2_for_statistic.xls --t1 treat1_for_statistic.xls --t2 treat2_for_statistic.xls  -o offtarget.xls\n")
         cat(paste(getopt(spec=spec, usage = T), "\n"))
         quit()
 }
