@@ -40,6 +40,7 @@ This pipeline requires only a standard computer with enough RAM to support the i
 ## Example and Usage
 
 ### 0. install related R package and Perl module
+The installation of related R packages and Perl modules is very quickly, which usually need only several minutes.
 install  R package "methylSig":
 ```bash
 
