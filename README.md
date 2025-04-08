@@ -22,14 +22,18 @@ This pipeline requires only a standard computer with enough RAM to support the i
 - Linux: Rocky Linux 8.8
 
 ### Software 
+- Trim_galore (version 0.6.6)
+- HISAT2 (version 4.8.5)
+- featureCount (version 2.0.4)
+- bowtie (version 1.3.0)
 - PRAISE pipeline (version 1.0)
-- Methylsig R package (version 1.17.0)
 - Perl (version 5.26)
 - Perl packages:
   - Modern::Perl
   - IO::All
 - R (version 4.3.1)
 - R packages
+  - RiboWaltz
   - methylSig
   - getopt
   - dplyr
@@ -37,7 +41,7 @@ This pipeline requires only a standard computer with enough RAM to support the i
 
 
 ## Example and Usage
-
+## 一. Analysis of sudoU off-target
 ### 0. install related R package and Perl module
 The installation of related R packages and Perl modules is very quickly, which usually need only several minutes.
 install  R package "methylSig":
