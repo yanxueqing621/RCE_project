@@ -55,7 +55,7 @@ After obtained raw data of the PRAISE sequencing, we firstly need to call transc
 | chr_site | position in chromosome |
 
 ### 2. Transform the format of sudoU_sites file
-change the format of sudoU_sites file to conduct statistic analysis, the output file gce_sudoU_sites_for_statistic.xls is used to conduct methylsig analysis, this step usually need less than one minite.
+change the format of sudoU_sites file to conduct statistic analysis, the output file gce_sudoU_sites_for_statistic.xls is used to conduct methylsig analysis, this step usually need less than one minute.
 * ``` perl convert_to_methylsig_format.pl  gce_sudoU_sites.xls  gce_sudoU_sites_for_statistic.xls```
 
 ### 3. identified offtarget sudoU sites
