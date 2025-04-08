@@ -4,8 +4,8 @@ library(DESeq2)
 
 spec = matrix(c(
                         'infile', 'i', 1, 'character',
-            'control','c', 1, 'character',
-            'treat','t', 1, 'character',
+            'outfile','o', 1, 'character',
+          
                         'help',  'h', 0, 'logical'
                         ), byrow = TRUE, ncol = 4)
 
@@ -35,7 +35,7 @@ calc_fpkm_tpm <- function(df){
   df.fpkm2 = data.frame(length = df$Length, df.fpkm)
   fpkm_tpm =  df.fpkm2 
   if (!file.exists("all_fpkm.txt")) {
-    write.table(fpkm_tpm, file = "all_fpkm_tpm.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+    write.table(fpkm_tpm, file = args$outfile, sep = "\t", quote = FALSE, row.names = FALSE)
   }
   return(df.fpkm)
 }
