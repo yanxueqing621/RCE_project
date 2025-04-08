@@ -104,6 +104,7 @@ change the format of sudoU_sites file to conduct statistic analysis, the output 
 * ``` Rscript identify_offtarget_site.R --c1 control1_for_statistic.xls --c2 control2_for_statistic.xls --t1 treat1_for_statistic.xls --t2 treat2_for_statistic.xls  -o offtarget.xls ```
 
 The content of each column in the outfile is as follows:
+
 | Columns | Interpretation |
 | :---: | :---: |
 | gene id | transcript id in Refseq |
@@ -118,18 +119,20 @@ The content of each column in the outfile is as follows:
 
 
 ## 二. Analysis of translation off-target by Riboseq
-* ```
+```bash
 perl 1.mapping.pl  test.fq.gz   ### outfile is: test_no_rRNA_tRNA.sort.bam
 Rscript 2.get_rrts.R test_no_rRNA_tRNA.sort.bam test_no_rRNA_tRNA.sort.bam.rrts
 ```
 
 ## 三. RNAseq analyis
 We have create the shell script pipeline to analysis the RNAseq data, The input is raw data with fastq format.  Only the sample name need to provide.
-* ```
+
+```bash
 sh rnaseq_pipe.sh test_sample o.test_sample
 cut -f 1,6- o.test_sample.count > o.test_sample.count6.xls
 Rscript count.summar -i o.test_sample.count6.xls -o o.test_sample.rpkm
 ```
+
 A outfile named o.test_sample.rpkm file will be generated, including the RPKM value of each gene.
 
 ## Licences
