@@ -113,5 +113,6 @@ The content of each column in the outfile is as follows:
 
 
 
-
+## Licences
+Released under GNU General Public License (GPL)
  
