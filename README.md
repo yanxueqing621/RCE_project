@@ -38,6 +38,37 @@ This pipeline requires only a standard computer with enough RAM to support the i
 
 
 ## Example and Usage
+
+### 0. install related R package
+install  R package "methylSig":
+```bash
+
+# install BiocManager if not exist
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("methylSig")
+```
+install R package getopt
+```bash
+
+```
+install R package getopt
+
+```bash
+
+```
+install R package getopt
+
+```bash
+# install BiocManager if not exist
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("bsseq")
+```
+
+
 ### 1. call transcriptomic-wide Ψ site from PRAISE sequecing method
 After obtained raw data of the PRAISE sequencing, we firstly need to call transcriptomic-wide Ψ sites according published PRAISE-pipeline (https://github.com/Zhe-jiang/PRAISE). This step is time-consuming, which usually need several days. Here, we have provided a example file in data dir ("gce_sudoU_sites.xls"). The content of each column in the outfile is as follows:
 
