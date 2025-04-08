@@ -97,3 +97,21 @@ change the format of sudoU_sites file to conduct statistic analysis, the output 
 
 ### 3. identified offtarget sudoU sites
 * ``` Rscript identify_offtarget_site.R --c1 control1_for_statistic.xls --c2 control2_for_statistic.xls --t1 treat1_for_statistic.xls --t2 treat2_for_statistic.xls  -o offtarget.xls ```
+
+The content of each column in the outfile is as follows:
+| Columns | Interpretation |
+| :---: | :---: |
+| gene id | transcript id in Refseq |
+| gene symbol | gene symbol |
+| gene type | mRNA, lncRNA or other type |
+| position | sudoU site position in transcript  |
+| control_ratio | sudoU ratio in control sample |
+| treat_ratio | sudoU ratio in treatment sample |
+| meth_diff |  ratio differenct between control and treatment |
+| p_value |  statistically significant of the off-target sudoU site |
+| fdr | corrected pvalue |
+
+
+
+
+ 
