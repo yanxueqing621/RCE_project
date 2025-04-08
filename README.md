@@ -49,14 +49,11 @@ if (!require("BiocManager", quietly = TRUE))
 
 BiocManager::install("methylSig")
 ```
-install R package getopt
-```bash
 
-```
 install R package getopt
 
 ```bash
-
+install.packages("getopt")
 ```
 install R package getopt
 
