@@ -56,7 +56,7 @@ After obtained raw data of the PRAISE sequencing, we firstly need to call transc
 
 ### 2. Transform the format of sudoU_sites file
 change the format of sudoU_sites file to conduct statistic analysis, the output file gce_sudoU_sites_for_statistic.xls is used to conduct methylsig analysis, this step usually need less than one minite.
-``` perl convert_to_methylsig_format.pl  gce_sudoU_sites.xls  gce_sudoU_sites_for_statistic.xls```
+* ``` perl convert_to_methylsig_format.pl  gce_sudoU_sites.xls  gce_sudoU_sites_for_statistic.xls```
 
 ### 3. identified offtarget sudoU sites
-``` Rscript identify_offtarget_site.R --c1 control1_for_statistic.xls --c2 control2_for_statistic.xls --t1 treat1_for_statistic.xls --t2 treat2_for_statistic.xls  -o offtarget.xls ```
+* ``` Rscript identify_offtarget_site.R --c1 control1_for_statistic.xls --c2 control2_for_statistic.xls --t1 treat1_for_statistic.xls --t2 treat2_for_statistic.xls  -o offtarget.xls ```
