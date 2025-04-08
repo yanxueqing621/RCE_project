@@ -7,8 +7,7 @@
 * License
 
 ## Background
-
-RNA Codon Expansion (RCE) strategy that introduces and decodes bioorthogonally assignable ΨCodons (ΨGA, ΨAA or ΨAG) at specified mRNA transcripts for ncAA incorporation in mammalian cells. This project provided the customized code for assessing sudoU off-target of RCE tools (RNA Codon Expansion)
+We developed an RNA Codon Expansion (RCE) strategy that introduces and decodes bioorthogonally assignable ΨCodons (ΨGA, ΨAA or ΨAG) at specified mRNA transcripts for ncAA incorporation in mammalian cells. The RCE strategy comprises a programmable guide RNA generating ΨCodon, an engineered decoder tRNA, and a specific aminoacyl-tRNA synthetase. For example, our RCE(ΨGA) system incorporated different functional ncAAs into proteins with higher incorporation specificity than the GCE system as examined by ribosome profiling and mass spectrometry. This project provided the customized code for assessing sudoU off-target and translation off-target (RNA Codon Expansion) and RNAseq analysis.
 
 
 
