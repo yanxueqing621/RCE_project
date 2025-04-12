@@ -42,7 +42,7 @@ This pipeline requires only a standard computer with enough RAM to support the i
 
 
 ## Example and Usage
-## 一. Analysis of sudoU off-target
+## Analysis of sudoU off-target
 ### 0. install related R package and Perl module
 The installation of related R packages and Perl modules is very quickly, which usually need only several minutes.
 install  R package "methylSig":
@@ -118,13 +118,13 @@ The content of each column in the outfile is as follows:
 | fdr | corrected pvalue |
 
 
-## 二. Analysis of translation off-target by Riboseq
+## Analysis of translation off-target by Riboseq
 ```bash
 perl 1.mapping.pl  test.fq.gz   ### outfile is: test_no_rRNA_tRNA.sort.bam
 Rscript 2.get_rrts.R test_no_rRNA_tRNA.sort.bam test_no_rRNA_tRNA.sort.bam.rrts
 ```
 
-## 三. RNAseq analyis
+## RNAseq analyis
 We have create the shell script pipeline to analysis the RNAseq data, The input is raw data with fastq format.  Only the sample name need to provide.
 
 ```bash
