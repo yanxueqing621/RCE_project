@@ -119,9 +119,11 @@ The content of each column in the outfile is as follows:
 
 
 ## Analysis of translation off-target by Riboseq
+The input is raw data with fastq format. For example, the input file is test.fq.gz
 ```bash
 perl 1.mapping.pl  test.fq.gz   ### outfile is: test_no_rRNA_tRNA.sort.bam
-Rscript 2.get_rrts.R test_no_rRNA_tRNA.sort.bam test_no_rRNA_tRNA.sort.bam.rrts
+Rscript 2.psite.r
+perl 3.cal_RRTS.pl test_psite_25_32.xls &
 ```
 
 ## RNAseq analyis
