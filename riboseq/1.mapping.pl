@@ -34,4 +34,5 @@ my $infile = shift;
    say "samtools sort -@ 20 -o $fq_no_rRNA_tRNA.sort.bam $fq_no_rRNA_tRNA.sam";
    `samtools sort -@ 20 -o $fq_no_rRNA_tRNA.sort.bam $fq_no_rRNA_tRNA.sam`;
    `rm $fq_no_rRNA_tRNA.sam`;
-
+   `ln -s $fq_no_rRNA_tRNA.sort.bam test.bam`
+    
